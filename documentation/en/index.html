@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGAEGQfb.py - Python Encryption Tool</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #d6d6d6;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+        }
+
+        .page {
+            width: 950px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #999;
+            box-shadow: 0 0 8px #999;
+        }
+
+        header {
+            height: 110px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: linear-gradient(#444, #222);
+            color: white;
+            border-bottom: 1px solid #111;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        nav {
+            background: linear-gradient(#eeeeee, #cfcfcf);
+            border-bottom: 1px solid #999;
+            padding: 8px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 7px 15px;
+            margin-right: 5px;
+            color: #222;
+            text-decoration: none;
+            border: 1px solid #aaa;
+            background: linear-gradient(#fff, #ddd);
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            background: #fff;
+        }
+
+        .content {
+            display: flex;
+            min-height: 500px;
+        }
+
+        aside {
+            width: 210px;
+            background: #eeeeee;
+            border-right: 1px solid #bbb;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        aside h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        aside a {
+            display: block;
+            padding: 7px;
+            margin-bottom: 4px;
+            background: #ddd;
+            border: 1px solid #bbb;
+            color: #333;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        aside a:hover {
+            background: #fff;
+        }
+
+        main {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .box {
+            border: 1px solid #aaa;
+            margin-bottom: 20px;
+        }
+
+        .box h2 {
+            margin: 0;
+            padding: 8px 12px;
+            font-size: 18px;
+            background: linear-gradient(#eeeeee, #cccccc);
+            border-bottom: 1px solid #aaa;
+        }
+
+        .box-content {
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        code {
+            background: #eee;
+            border: 1px solid #ccc;
+            padding: 2px 4px;
+            font-family: "Courier New", monospace;
+        }
+
+        pre {
+            background: #222;
+            color: #eee;
+            padding: 15px;
+            overflow-x: auto;
+            border: 1px solid #111;
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 15px;
+            background: linear-gradient(#fff, #ccc);
+            border: 1px solid #888;
+            color: #222;
+            text-decoration: none;
+            font-size: 13px;
+            margin-right: 5px;
+        }
+
+        .button:hover {
+            background: #fff;
+        }
+
+        .warning {
+            background: #fff4cc;
+            border: 1px solid #d6b656;
+            padding: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ddd;
+            border-top: 1px solid #aaa;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #ddd;
+            border: 1px solid #999;
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+        <h1>UGAEGQfb.py</h1>
+        <p>Local Python text encryption tool</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="https://github.com/TechKarol/UGAEGQfb.py">GitHub</a>
+    </nav>
+
+    <div class="content">
+
+        <aside>
+            <h3>Navigation</h3>
+
+            <a href="index.html">Home</a>
+            <a href="documentation.html">Documentation</a>
+
+            <br>
+
+            <h3>Languages</h3>
+
+            <a href="../pl/">Polski</a>
+            <a href="../en/">English</a>
+
+            <br>
+
+            <h3>Project</h3>
+
+            <span class="status">Python</span>
+            <span class="status">CLI</span>
+            <span class="status">Educational</span>
+        </aside>
+
+        <main>
+
+            <div class="box">
+                <h2>Welcome</h2>
+
+                <div class="box-content">
+                    <p>
+                        <strong>UGAEGQfb.py</strong> is a local text encryption
+                        project written in Python.
+                    </p>
+
+                    <p>
+                        The project was created as an educational experiment
+                        focused on Python programming, algorithms and basic
+                        cryptography concepts.
+                    </p>
+
+                    <a class="button" href="documentation.html">
+                        View Documentation
+                    </a>
+
+                    <a class="button"
+                       href="https://github.com/TechKarol/UGAEGQfb.py">
+                        GitHub Repository
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>About the Project</h2>
+
+                <div class="box-content">
+                    <p>
+                        UGAEGQfb.py currently uses a modified implementation
+                        of the Caesar cipher for educational purposes.
+                    </p>
+
+                    <p>
+                        The program runs locally in the terminal and does not
+                        require an online server.
+                    </p>
+
+                    <pre>Text → Encryption → Encrypted Text
+Encrypted Text + Key → Decryption → Original Text</pre>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Example</h2>
+
+                <div class="box-content">
+                    <p>Example using the key <strong>8</strong>:</p>
+
+                    <pre>Original:   Aluta
+Key:        8
+Encrypted:  Itcbi</pre>
+
+                    <p>
+                        The same key can be used to decrypt the text.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Security Notice</h2>
+
+                <div class="box-content">
+                    <div class="warning">
+                        <strong>Important:</strong>
+                        UGAEGQfb.py is an educational cryptography project.
+                        The current Caesar cipher implementation is not
+                        considered secure for protecting sensitive information.
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Project Structure</h2>
+
+                <div class="box-content">
+
+                    <pre>UGAEGQfb.py/
+├── UGAEGQfb.py
+├── UGAEGQfb.exe
+├── README.md
+├── LICENSE
+└── documentation/
+    ├── pl/
+    └── en/</pre>
+
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+        UGAEGQfb.py &copy; 2026 — Educational Python Project
+    </footer>
+
+</div>
+
+</body>
+</html>
