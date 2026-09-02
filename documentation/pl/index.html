@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UGAEGQfb.py - Dokumentacja</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #d6d6d6;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+        }
+
+        .page {
+            width: 950px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #999;
+            box-shadow: 0 0 8px #999;
+        }
+
+        header {
+            height: 110px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: linear-gradient(#444, #222);
+            color: white;
+            border-bottom: 1px solid #111;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        nav {
+            background: linear-gradient(#eeeeee, #cfcfcf);
+            border-bottom: 1px solid #999;
+            padding: 8px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 7px 15px;
+            margin-right: 5px;
+            color: #222;
+            text-decoration: none;
+            border: 1px solid #aaa;
+            background: linear-gradient(#fff, #ddd);
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            background: #fff;
+        }
+
+        .content {
+            display: flex;
+            min-height: 500px;
+        }
+
+        aside {
+            width: 210px;
+            background: #eeeeee;
+            border-right: 1px solid #bbb;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        aside h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        aside a {
+            display: block;
+            padding: 7px;
+            margin-bottom: 4px;
+            background: #ddd;
+            border: 1px solid #bbb;
+            color: #333;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        aside a:hover {
+            background: #fff;
+        }
+
+        main {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .box {
+            border: 1px solid #aaa;
+            margin-bottom: 20px;
+        }
+
+        .box h2 {
+            margin: 0;
+            padding: 8px 12px;
+            font-size: 18px;
+            background: linear-gradient(#eeeeee, #cccccc);
+            border-bottom: 1px solid #aaa;
+        }
+
+        .box-content {
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 15px;
+            background: linear-gradient(#fff, #ccc);
+            border: 1px solid #888;
+            color: #222;
+            text-decoration: none;
+            font-size: 13px;
+            margin-right: 5px;
+        }
+
+        .button:hover {
+            background: #fff;
+        }
+
+        .warning {
+            background: #fff4cc;
+            border: 1px solid #d6b656;
+            padding: 12px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 3px 8px;
+            margin: 2px;
+            background: #ddd;
+            border: 1px solid #999;
+            font-size: 11px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ddd;
+            border-top: 1px solid #aaa;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+        <h1>UGAEGQfb.py</h1>
+        <p>Lokalne narzędzie do szyfrowania tekstu w Pythonie</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Dokumentacja</a>
+        <a href="documentation.html">Instrukcja</a>
+        <a href="https://github.com/TechKarol/UGAEGQfb.py">GitHub</a>
+    </nav>
+
+    <div class="content">
+
+        <aside>
+
+            <h3>Dokumentacja</h3>
+
+            <a href="index.html">Strona główna</a>
+            <a href="documentation.html">Pełna dokumentacja</a>
+
+            <br>
+
+            <h3>Język</h3>
+
+            <a href="../pl/">🇵🇱 Polski</a>
+            <a href="../en/">🇬🇧 English</a>
+
+            <br>
+
+            <h3>Projekt</h3>
+
+            <span class="status">Python</span>
+            <span class="status">CLI</span>
+            <span class="status">Open Source</span>
+            <span class="status">Educational</span>
+
+        </aside>
+
+        <main>
+
+            <div class="box">
+
+                <h2>Witaj w dokumentacji UGAEGQfb.py</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        <strong>UGAEGQfb.py</strong> to lokalny program
+                        napisany w Pythonie, służący do szyfrowania
+                        i odszyfrowywania tekstu.
+                    </p>
+
+                    <p>
+                        Projekt został stworzony jako projekt edukacyjny
+                        do nauki języka Python, algorytmów oraz podstaw
+                        kryptografii.
+                    </p>
+
+                    <a class="button" href="documentation.html">
+                        Otwórz dokumentację
+                    </a>
+
+                    <a class="button"
+                       href="https://github.com/TechKarol/UGAEGQfb.py">
+                        Repozytorium GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <h2>O projekcie</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Program działa lokalnie w terminalu i nie wymaga
+                        połączenia z serwerem do wykonywania szyfrowania.
+                    </p>
+
+                    <p>
+                        Aktualna wersja wykorzystuje szyfr Cezara.
+                    </p>
+
+                    <p>
+                        Program posiada obsługę dwóch języków:
+                    </p>
+
+                    <ul>
+                        <li>🇵🇱 Polski</li>
+                        <li>🇬🇧 English</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <h2>Przykład działania</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Przykład szyfrowania tekstu przy użyciu klucza
+                        <strong>8</strong>:
+                    </p>
+
+                    <pre>
+Tekst:       Aluta
+Klucz:       8
+Zaszyfrowano: Itcbi
+                    </pre>
+
+                    <p>
+                        Do odszyfrowania potrzebny jest ten sam klucz.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <h2>Bezpieczeństwo</h2>
+
+                <div class="box-content">
+
+                    <div class="warning">
+
+                        <strong>Uwaga:</strong>
+
+                        Aktualna wersja UGAEGQfb.py wykorzystuje szyfr Cezara,
+                        który nie zapewnia współczesnego poziomu bezpieczeństwa.
+
+                        Nie używaj programu do ochrony prawdziwych haseł,
+                        danych osobowych ani innych poufnych informacji.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <h2>Co znajdziesz w dokumentacji?</h2>
+
+                <div class="box-content">
+
+                    <ul>
+                        <li>Wymagania programu</li>
+                        <li>Instalację</li>
+                        <li>Instrukcję obsługi</li>
+                        <li>Opis szyfru Cezara</li>
+                        <li>Wyjaśnienie kodu Python</li>
+                        <li>System kluczy</li>
+                        <li>Informacje dotyczące bezpieczeństwa</li>
+                        <li>Budowanie pliku EXE</li>
+                        <li>Strukturę projektu</li>
+                        <li>Plan rozwoju</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <h2>Status projektu</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Projekt jest rozwijany jako projekt edukacyjny.
+                    </p>
+
+                    <p>
+                        Celem jest stopniowe poznawanie:
+                    </p>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>programowania CLI</li>
+                        <li>algorytmów</li>
+                        <li>kryptografii</li>
+                        <li>obsługi plików</li>
+                        <li>zarządzania kluczami</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+        UGAEGQfb.py &copy; 2026 — Polska dokumentacja
+    </footer>
+
+</div>
+
+</body>
+</html>
