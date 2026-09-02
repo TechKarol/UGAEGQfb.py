@@ -1,433 +1,195 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>UGAEGQfb - Local Text Encryption</title>
+    <title>UGAEGQfb.py - Language Selection</title>
 
     <style>
         body {
             margin: 0;
-            background: #d7d7d7;
+            padding: 0;
+            background: #d6d6d6;
             font-family: Arial, Helvetica, sans-serif;
             color: #222;
         }
 
         .page {
-            width: 950px;
-            margin: 30px auto;
+            width: 700px;
+            margin: 80px auto;
             background: #fff;
-            border: 1px solid #888;
-            box-shadow: 0 2px 8px #777;
+            border: 1px solid #999;
+            box-shadow: 0 0 8px #999;
         }
 
-        /* HEADER */
-
-        .header {
-            padding: 22px;
+        header {
+            padding: 25px;
+            background: linear-gradient(#444, #222);
             color: white;
-            background: linear-gradient(#4b4b4b, #202020);
-            border-bottom: 3px solid #111;
+            border-bottom: 1px solid #111;
         }
 
-        .header h1 {
+        header h1 {
             margin: 0;
             font-size: 30px;
             text-shadow: 1px 1px 2px #000;
         }
 
-        .header p {
-            margin: 6px 0 0;
+        header p {
+            margin: 8px 0 0;
             color: #ccc;
             font-size: 13px;
         }
 
-        /* MENU */
-
-        .menu {
-            background: linear-gradient(#eee, #ccc);
-            border-bottom: 1px solid #999;
-        }
-
-        .menu a {
-            display: inline-block;
-            padding: 11px 18px;
-            border-right: 1px solid #aaa;
-            color: #222;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .menu a:hover {
-            background: #bbb;
-        }
-
-        /* CONTENT */
-
         .content {
-            display: flex;
-            min-height: 500px;
+            padding: 30px;
+            text-align: center;
         }
-
-        /* SIDEBAR */
-
-        .sidebar {
-            width: 190px;
-            padding: 15px;
-            background: #e5e5e5;
-            border-right: 1px solid #aaa;
-        }
-
-        .sidebar h3 {
-            margin-top: 0;
-            padding-bottom: 7px;
-            border-bottom: 1px solid #aaa;
-            font-size: 15px;
-        }
-
-        .sidebar ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .sidebar li {
-            margin-bottom: 5px;
-        }
-
-        .sidebar a {
-            display: block;
-            padding: 7px;
-            background: #d3d3d3;
-            border: 1px solid #aaa;
-            color: #333;
-            text-decoration: none;
-            font-size: 12px;
-        }
-
-        .sidebar a:hover {
-            background: #bbb;
-        }
-
-        .info {
-            margin-top: 25px;
-            padding: 10px;
-            background: #eee;
-            border: 1px solid #bbb;
-            font-size: 11px;
-        }
-
-        /* MAIN */
-
-        .main {
-            flex: 1;
-            padding: 25px;
-        }
-
-        .main h2 {
-            margin-top: 0;
-            color: #333;
-            font-size: 24px;
-        }
-
-        .main h3 {
-            color: #444;
-            font-size: 17px;
-        }
-
-        .main p {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        /* BOX */
 
         .box {
-            margin-top: 20px;
             border: 1px solid #aaa;
-            background: #f1f1f1;
         }
 
         .box-title {
             padding: 9px;
-            background: linear-gradient(#555, #333);
-            color: white;
-            font-size: 13px;
+            background: linear-gradient(#eeeeee, #cccccc);
+            border-bottom: 1px solid #aaa;
+            font-size: 18px;
             font-weight: bold;
         }
 
         .box-content {
-            padding: 15px;
+            padding: 25px;
         }
 
-        /* CODE */
-
-        pre {
-            padding: 12px;
-            overflow-x: auto;
-            background: #222;
-            border: 1px solid #111;
-            color: #eee;
-            font-family: Consolas, monospace;
-            font-size: 12px;
-        }
-
-        /* BUTTON */
-
-        .button {
+        .language {
             display: inline-block;
-            padding: 8px 16px;
-            margin-top: 5px;
-            background: linear-gradient(#eee, #bbb);
-            border: 1px solid #777;
+            width: 180px;
+            margin: 8px;
+            padding: 15px 10px;
+
+            background: linear-gradient(#fff, #ddd);
+            border: 1px solid #888;
+
             color: #222;
             text-decoration: none;
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 15px;
         }
 
-        .button:hover {
-            background: linear-gradient(#fff, #ccc);
+        .language:hover {
+            background: #fff;
         }
 
-        /* WARNING */
-
-        .warning {
-            padding: 10px;
-            background: #ffffcc;
-            border: 1px solid #cccc88;
-            font-size: 12px;
-        }
-
-        /* FOOTER */
-
-        .footer {
-            padding: 15px;
-            background: #333;
-            border-top: 3px solid #111;
-            color: #bbb;
-            text-align: center;
+        .language small {
+            display: block;
+            margin-top: 5px;
+            color: #666;
             font-size: 11px;
         }
 
-        .footer a {
-            color: #ddd;
+        #detected {
+            margin-top: 20px;
+            color: #666;
+            font-size: 12px;
         }
 
-        @media (max-width: 980px) {
-            .page {
-                width: 95%;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .content {
-                display: block;
-            }
-
-            .sidebar {
-                width: auto;
-                border-right: none;
-                border-bottom: 1px solid #aaa;
-            }
+        footer {
+            padding: 12px;
+            background: #ddd;
+            border-top: 1px solid #aaa;
+            text-align: center;
+            color: #555;
+            font-size: 11px;
         }
     </style>
+
+    <script>
+        function detectLanguage() {
+            const language = (
+                navigator.language ||
+                navigator.userLanguage ||
+                "en"
+            ).toLowerCase();
+
+            const detected = document.getElementById("detected");
+
+            if (language.startsWith("pl")) {
+                detected.innerHTML =
+                    "Polish detected. Redirecting...";
+
+                setTimeout(function () {
+                    window.location.href = "documentation/pl/";
+                }, 700);
+
+                return;
+            }
+
+            if (language.startsWith("en")) {
+                detected.innerHTML =
+                    "English detected. Redirecting...";
+
+                setTimeout(function () {
+                    window.location.href = "documentation/en/";
+                }, 700);
+
+                return;
+            }
+
+            detected.innerHTML =
+                "Language not detected. Please select a language.";
+        }
+
+        window.onload = detectLanguage;
+    </script>
 </head>
 
 <body>
 
 <div class="page">
 
-    <!-- HEADER -->
-
-    <div class="header">
-        <h1>🔐 UGAEGQfb</h1>
-        <p>
-            Local Text Encryption Tool • Python • Educational Cryptography Project
-        </p>
-    </div>
-
-
-    <!-- MENU -->
-
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="documentation.html">Documentation</a>
-        <a href="https://github.com/TechKarol/UGAEGQfb.py">
-            GitHub
-        </a>
-    </div>
-
-
-    <!-- CONTENT -->
+    <header>
+        <h1>UGAEGQfb.py</h1>
+        <p>Local Python text encryption tool</p>
+    </header>
 
     <div class="content">
 
-        <!-- SIDEBAR -->
+        <div class="box">
 
-        <div class="sidebar">
-
-            <h3>Navigation</h3>
-
-            <ul>
-                <li>
-                    <a href="index.html">» Home</a>
-                </li>
-
-                <li>
-                    <a href="documentation.html">» Documentation</a>
-                </li>
-
-                <li>
-                    <a href="documentation.html#installation">
-                        » Installation
-                    </a>
-                </li>
-
-                <li>
-                    <a href="documentation.html#usage">
-                        » Usage
-                    </a>
-                </li>
-
-                <li>
-                    <a href="documentation.html#security">
-                        » Security
-                    </a>
-                </li>
-            </ul>
-
-
-            <div class="info">
-                <b>Project Info</b><br><br>
-
-                Version: 1.0<br>
-                Language: Python<br>
-                Type: CLI Tool<br>
-                Status: Development
+            <div class="box-title">
+                Select Language
             </div>
 
-        </div>
+            <div class="box-content">
 
+                <p>
+                    Choose the language for the documentation.
+                </p>
 
-        <!-- MAIN -->
+                <a class="language" href="documentation/pl/">
+                    Polski
+                    <small>Polish documentation</small>
+                </a>
 
-        <div class="main">
+                <a class="language" href="documentation/en/">
+                    English
+                    <small>English documentation</small>
+                </a>
 
-            <h2>UGAEGQfb</h2>
-
-            <p>
-                UGAEGQfb is a local command-line text encryption
-                project written in Python.
-            </p>
-
-            <p>
-                The project was created to learn Python programming,
-                algorithms, cryptography concepts and software development.
-            </p>
-
-
-            <div class="box">
-
-                <div class="box-title">
-                    About the project
+                <div id="detected">
+                    Detecting browser language...
                 </div>
 
-                <div class="box-content">
-
-                    <p>
-                        UGAEGQfb currently uses the Caesar cipher
-                        as an educational encryption algorithm.
-                    </p>
-
-                    <p>
-                        The application runs locally and does not
-                        require a server, database or internet connection.
-                    </p>
-
-                    <a class="button" href="documentation.html">
-                        View Documentation »
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="box">
-
-                <div class="box-title">
-                    Example
-                </div>
-
-                <div class="box-content">
-
-<pre>
-Plaintext:
-Hello World
-
-Key:
-3
-
-Ciphertext:
-Khoor Zruog
-</pre>
-
-                </div>
-
-            </div>
-
-
-            <div class="box">
-
-                <div class="box-title">
-                    Project structure
-                </div>
-
-                <div class="box-content">
-
-<pre>
-UGAEGQfb/
-│
-├── UGAEGQfb.py
-├── UGAEGQfb.exe
-├── index.html
-├── documentation.html
-└── LICENSE
-</pre>
-
-                </div>
-
-            </div>
-
-
-            <div class="warning">
-                <b>⚠ Security Notice:</b><br><br>
-
-                The Caesar cipher is not cryptographically secure.
-                This project is intended for educational purposes
-                and should not be used to protect sensitive information.
             </div>
 
         </div>
 
     </div>
 
-
-    <!-- FOOTER -->
-
-    <div class="footer">
-
-        UGAEGQfb © 2026 |
-        Educational Cryptography Project |
-
-        <a href="https://github.com/TechKarol/UGAEGQfb.py">
-            GitHub
-        </a>
-
-    </div>
+    <footer>
+        UGAEGQfb.py &copy; 2026
+    </footer>
 
 </div>
 
