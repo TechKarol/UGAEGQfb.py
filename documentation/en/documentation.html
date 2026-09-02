@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UGAEGQfb.py - Documentation</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #d6d6d6;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+        }
+
+        .page {
+            width: 950px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #999;
+            box-shadow: 0 0 8px #999;
+        }
+
+        header {
+            height: 110px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: linear-gradient(#444, #222);
+            color: white;
+            border-bottom: 1px solid #111;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        nav {
+            background: linear-gradient(#eeeeee, #cfcfcf);
+            border-bottom: 1px solid #999;
+            padding: 8px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 7px 15px;
+            margin-right: 5px;
+            color: #222;
+            text-decoration: none;
+            border: 1px solid #aaa;
+            background: linear-gradient(#fff, #ddd);
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            background: #fff;
+        }
+
+        .content {
+            display: flex;
+            min-height: 700px;
+        }
+
+        aside {
+            width: 210px;
+            background: #eeeeee;
+            border-right: 1px solid #bbb;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        aside h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        aside a {
+            display: block;
+            padding: 7px;
+            margin-bottom: 4px;
+            background: #ddd;
+            border: 1px solid #bbb;
+            color: #333;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        aside a:hover {
+            background: #fff;
+        }
+
+        main {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .box {
+            border: 1px solid #aaa;
+            margin-bottom: 20px;
+        }
+
+        .box h2 {
+            margin: 0;
+            padding: 8px 12px;
+            font-size: 18px;
+            background: linear-gradient(#eeeeee, #cccccc);
+            border-bottom: 1px solid #aaa;
+        }
+
+        .box-content {
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        pre {
+            background: #222;
+            color: #eee;
+            padding: 15px;
+            overflow-x: auto;
+            border: 1px solid #111;
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+        }
+
+        code {
+            background: #eee;
+            border: 1px solid #ccc;
+            padding: 2px 4px;
+            font-family: "Courier New", monospace;
+        }
+
+        .warning {
+            background: #fff4cc;
+            border: 1px solid #d6b656;
+            padding: 12px;
+        }
+
+        .info {
+            background: #e8f0ff;
+            border: 1px solid #9aaed0;
+            padding: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ddd;
+            border-top: 1px solid #aaa;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+        <h1>UGAEGQfb.py</h1>
+        <p>Documentation / English</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Documentation Home</a>
+        <a href="../../">Project Home</a>
+        <a href="https://github.com/TechKarol/UGAEGQfb.py">GitHub</a>
+    </nav>
+
+    <div class="content">
+
+        <aside>
+
+            <h3>Documentation</h3>
+
+            <a href="#overview">Overview</a>
+            <a href="#requirements">Requirements</a>
+            <a href="#installation">Installation</a>
+            <a href="#usage">Usage</a>
+            <a href="#algorithm">Algorithm</a>
+            <a href="#code">Code</a>
+            <a href="#key">Encryption Key</a>
+            <a href="#security">Security</a>
+            <a href="#build">Build EXE</a>
+            <a href="#structure">Structure</a>
+            <a href="#roadmap">Roadmap</a>
+
+            <br>
+
+            <h3>Language</h3>
+
+            <a href="../pl/">Polski</a>
+            <a href="../en/">English</a>
+
+        </aside>
+
+        <main>
+
+            <div class="box" id="overview">
+                <h2>1. Overview</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        <strong>UGAEGQfb.py</strong> is a local command-line
+                        text encryption program written in Python.
+                    </p>
+
+                    <p>
+                        The main purpose of this project is educational.
+                        It demonstrates basic programming concepts together
+                        with a simple classical encryption algorithm.
+                    </p>
+
+                    <div class="info">
+                        The program currently uses the Caesar cipher.
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="requirements">
+                <h2>2. Requirements</h2>
+
+                <div class="box-content">
+
+                    <p>To run the source code, you need:</p>
+
+                    <ul>
+                        <li>Python 3.x</li>
+                        <li>A terminal / command prompt</li>
+                        <li>The UGAEGQfb.py source file</li>
+                    </ul>
+
+                    <p>
+                        No external Python libraries are required by the
+                        current source code.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="installation">
+                <h2>3. Installation</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Download or clone the repository from GitHub.
+                    </p>
+
+                    <pre>git clone https://github.com/TechKarol/UGAEGQfb.py.git</pre>
+
+                    <p>
+                        Enter the project directory:
+                    </p>
+
+                    <pre>cd UGAEGQfb.py</pre>
+
+                    <p>
+                        Then run the Python program:
+                    </p>
+
+                    <pre>python UGAEGQfb.py</pre>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="usage">
+                <h2>4. Usage</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        After starting the program, the main menu is displayed:
+                    </p>
+
+                    <pre>1. Encrypt
+2. Decrypt
+3. Exit</pre>
+
+                    <p>
+                        Select an option by entering its number.
+                    </p>
+
+                    <h3>Encryption</h3>
+
+                    <p>
+                        Select <code>1</code>, enter your text and the program
+                        generates a random Caesar cipher key.
+                    </p>
+
+                    <pre>Enter text to encrypt: Aluta
+
+Encrypted: Itcbi
+Key: 8</pre>
+
+                    <h3>Decryption</h3>
+
+                    <p>
+                        Select <code>2</code>, enter the encrypted text and
+                        provide the key.
+                    </p>
+
+                    <pre>Enter encrypted text: Itcbi
+Enter key: 8
+
+Decrypted: Aluta</pre>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="algorithm">
+                <h2>5. Algorithm</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        UGAEGQfb.py currently uses the
+                        <strong>Caesar cipher</strong>.
+                    </p>
+
+                    <p>
+                        The Caesar cipher shifts letters by a fixed number
+                        of positions in the alphabet.
+                    </p>
+
+                    <p>For example, with a key of 3:</p>
+
+                    <pre>A → D
+B → E
+C → F
+D → G</pre>
+
+                    <p>
+                        The mathematical operation used by the program is:
+                    </p>
+
+                    <pre>E(x) = (x + k) mod 26</pre>
+
+                    <p>Decryption uses:</p>
+
+                    <pre>D(x) = (x - k) mod 26</pre>
+
+                    <p>
+                        Where <code>x</code> is the letter position and
+                        <code>k</code> is the encryption key.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="code">
+                <h2>6. Code</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        The main encryption function is:
+                    </p>
+
+                    <pre>def szyfruj(tekst, klucz):
+    return ''.join(
+        chr((ord(c) - 65 + klucz) % 26 + 65)
+        if c.isupper()
+        else chr((ord(c) - 97 + klucz) % 26 + 97)
+        if c.islower()
+        else c
+        for c in tekst
+    )</pre>
+
+                    <p>
+                        The decryption function reuses the encryption function
+                        with a negative key:
+                    </p>
+
+                    <pre>def odszyfruj(tekst, klucz):
+    return szyfruj(tekst, -klucz)</pre>
+
+                    <p>
+                        This avoids duplicating the encryption algorithm.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="key">
+                <h2>7. Encryption Key</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        The current program generates a random key between
+                        <code>1</code> and <code>25</code>.
+                    </p>
+
+                    <pre>klucz = random.randint(1, 25)</pre>
+
+                    <p>
+                        The key is displayed after encryption.
+                    </p>
+
+                    <div class="warning">
+                        <strong>Important:</strong>
+                        The key is required to decrypt the message.
+                        If the key is lost, the encrypted message cannot be
+                        normally decrypted using the program.
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="security">
+                <h2>8. Security</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        The current implementation should not be considered
+                        secure cryptography.
+                    </p>
+
+                    <p>
+                        The Caesar cipher has a very small key space and can
+                        be broken easily by trying all possible shifts.
+                    </p>
+
+                    <p>
+                        This project is intended for learning and experimentation,
+                        not for protecting passwords, personal information or
+                        other sensitive data.
+                    </p>
+
+                    <div class="warning">
+                        Do not use UGAEGQfb.py to protect real sensitive data.
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="build">
+                <h2>9. Building the EXE</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        The Python program can be converted into a Windows
+                        executable using PyInstaller.
+                    </p>
+
+                    <p>Install PyInstaller:</p>
+
+                    <pre>pip install pyinstaller</pre>
+
+                    <p>Build the executable:</p>
+
+                    <pre>py -m PyInstaller --onefile UGAEGQfb.py</pre>
+
+                    <p>
+                        The resulting executable will be located in:
+                    </p>
+
+                    <pre>dist/UGAEGQfb.exe</pre>
+
+                    <p>
+                        Because the application uses terminal input and output,
+                        it should not be built with <code>--noconsole</code>.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="structure">
+                <h2>10. Project Structure</h2>
+
+                <div class="box-content">
+
+                    <pre>UGAEGQfb.py/
+│
+├── UGAEGQfb.py
+├── UGAEGQfb.exe
+├── README.md
+├── LICENSE
+│
+└── documentation/
+    ├── pl/
+    │   ├── index.html
+    │   └── documentation.html
+    │
+    └── en/
+        ├── index.html
+        └── documentation.html</pre>
+
+                </div>
+            </div>
+
+
+            <div class="box" id="roadmap">
+                <h2>11. Roadmap</h2>
+
+                <div class="box-content">
+
+                    <ul>
+                        <li>Improve input validation</li>
+                        <li>Add local configuration / storage</li>
+                        <li>Experiment with the Vigenère cipher</li>
+                        <li>Improve key management</li>
+                        <li>Add better error handling</li>
+                        <li>Learn modern authenticated encryption</li>
+                        <li>Consider AES-GCM or ChaCha20-Poly1305 for a future version</li>
+                    </ul>
+
+                    <p>
+                        The long-term goal is to use this project as a way
+                        to learn Python, software engineering and cryptography.
+                    </p>
+
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+        UGAEGQfb.py &copy; 2026 — Documentation in English
+    </footer>
+
+</div>
+
+</body>
+</html>
