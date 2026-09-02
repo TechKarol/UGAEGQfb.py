@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UGAEGQfb.py - Dokumentacja PL</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #d6d6d6;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+        }
+
+        .page {
+            width: 950px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #999;
+            box-shadow: 0 0 8px #999;
+        }
+
+        header {
+            height: 110px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: linear-gradient(#444, #222);
+            color: white;
+            border-bottom: 1px solid #111;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        nav {
+            background: linear-gradient(#eeeeee, #cfcfcf);
+            border-bottom: 1px solid #999;
+            padding: 8px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 7px 15px;
+            margin-right: 5px;
+            color: #222;
+            text-decoration: none;
+            border: 1px solid #aaa;
+            background: linear-gradient(#fff, #ddd);
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            background: #fff;
+        }
+
+        .content {
+            display: flex;
+            min-height: 700px;
+        }
+
+        aside {
+            width: 210px;
+            background: #eeeeee;
+            border-right: 1px solid #bbb;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        aside h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        aside a {
+            display: block;
+            padding: 7px;
+            margin-bottom: 4px;
+            background: #ddd;
+            border: 1px solid #bbb;
+            color: #333;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        aside a:hover {
+            background: #fff;
+        }
+
+        main {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .box {
+            border: 1px solid #aaa;
+            margin-bottom: 20px;
+        }
+
+        .box h2 {
+            margin: 0;
+            padding: 8px 12px;
+            font-size: 18px;
+            background: linear-gradient(#eeeeee, #cccccc);
+            border-bottom: 1px solid #aaa;
+        }
+
+        .box h3 {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        .box-content {
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        code {
+            background: #eee;
+            border: 1px solid #ccc;
+            padding: 2px 4px;
+            font-family: "Courier New", monospace;
+        }
+
+        pre {
+            background: #222;
+            color: #eee;
+            padding: 15px;
+            overflow-x: auto;
+            border: 1px solid #111;
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+        }
+
+        .warning {
+            background: #fff4cc;
+            border: 1px solid #d6b656;
+            padding: 12px;
+        }
+
+        .info {
+            background: #e8f0ff;
+            border: 1px solid #9aaed0;
+            padding: 12px;
+        }
+
+        .success {
+            background: #e8f5e8;
+            border: 1px solid #9abb9a;
+            padding: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ddd;
+            border-top: 1px solid #aaa;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+        <h1>UGAEGQfb.py</h1>
+        <p>Dokumentacja projektu — język polski</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="documentation.html">Dokumentacja</a>
+        <a href="https://github.com/TechKarol/UGAEGQfb.py">GitHub</a>
+    </nav>
+
+    <div class="content">
+
+        <aside>
+
+            <h3>Spis treści</h3>
+
+            <a href="#overview">Opis</a>
+            <a href="#requirements">Wymagania</a>
+            <a href="#installation">Instalacja</a>
+            <a href="#usage">Użycie</a>
+            <a href="#algorithm">Algorytm</a>
+            <a href="#code">Kod</a>
+            <a href="#language">Języki</a>
+            <a href="#key">Klucz</a>
+            <a href="#security">Bezpieczeństwo</a>
+            <a href="#exe">Plik EXE</a>
+            <a href="#structure">Struktura</a>
+            <a href="#roadmap">Rozwój</a>
+
+            <br>
+
+            <h3>Język</h3>
+
+            <a href="../pl/">🇵🇱 Polski</a>
+            <a href="../en/">🇬🇧 English</a>
+
+        </aside>
+
+
+        <main>
+
+
+            <!-- OPIS -->
+
+            <div class="box" id="overview">
+
+                <h2>1. Opis projektu</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        <strong>UGAEGQfb.py</strong> to lokalne narzędzie
+                        działające w terminalu, napisane w języku Python.
+                    </p>
+
+                    <p>
+                        Program pozwala szyfrować oraz odszyfrowywać tekst
+                        przy użyciu prostego szyfru Cezara.
+                    </p>
+
+                    <div class="info">
+
+                        <strong>Cel projektu:</strong>
+
+                        Nauka języka Python, podstaw algorytmów,
+                        funkcji, pętli, obsługi tekstu oraz podstaw
+                        kryptografii.
+
+                    </div>
+
+                    <p>
+                        Program nie potrzebuje serwera ani połączenia
+                        internetowego do wykonywania operacji szyfrowania.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- WYMAGANIA -->
+
+            <div class="box" id="requirements">
+
+                <h2>2. Wymagania</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Do uruchomienia kodu źródłowego potrzebujesz:
+                    </p>
+
+                    <ul>
+                        <li>Python 3.x</li>
+                        <li>terminala / wiersza poleceń</li>
+                        <li>pliku <code>UGAEGQfb.py</code></li>
+                    </ul>
+
+                    <p>
+                        Aktualna wersja programu korzysta wyłącznie
+                        ze standardowej biblioteki Pythona.
+                    </p>
+
+                    <p>
+                        Używany moduł:
+                    </p>
+
+                    <pre>import random</pre>
+
+                </div>
+
+            </div>
+
+
+            <!-- INSTALACJA -->
+
+            <div class="box" id="installation">
+
+                <h2>3. Instalacja</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Pobierz repozytorium projektu:
+                    </p>
+
+                    <pre>git clone https://github.com/TechKarol/UGAEGQfb.py.git</pre>
+
+                    <p>
+                        Przejdź do katalogu projektu:
+                    </p>
+
+                    <pre>cd UGAEGQfb.py</pre>
+
+                    <p>
+                        Uruchom program:
+                    </p>
+
+                    <pre>python UGAEGQfb.py</pre>
+
+                    <p>
+                        W systemie Windows możesz również użyć:
+                    </p>
+
+                    <pre>py UGAEGQfb.py</pre>
+
+                </div>
+
+            </div>
+
+
+            <!-- UŻYCIE -->
+
+            <div class="box" id="usage">
+
+                <h2>4. Użycie programu</h2>
+
+                <div class="box-content">
+
+                    <h3>Wybór języka</h3>
+
+                    <p>
+                        Po uruchomieniu programu użytkownik wybiera język:
+                    </p>
+
+                    <pre>Select language / Wybierz język:
+
+1. Polski
+2. English
+
+Choose / Wybierz:</pre>
+
+                    <p>
+                        Wybrany język jest następnie używany przez
+                        całe menu programu.
+                    </p>
+
+
+                    <h3>Menu główne</h3>
+
+                    <p>Dla języka polskiego:</p>
+
+                    <pre>1. Szyfruj
+2. Odszyfruj
+3. Wyjdź</pre>
+
+                    <p>Dla języka angielskiego:</p>
+
+                    <pre>1. Encrypt
+2. Decrypt
+3. Exit</pre>
+
+
+                    <h3>Szyfrowanie</h3>
+
+                    <p>
+                        Wybierz opcję <code>1</code>.
+                        Program poprosi o tekst.
+                    </p>
+
+                    <pre>Wpisz tekst do zaszyfrowania: Aluta</pre>
+
+                    <p>
+                        Następnie program wygeneruje losowy klucz.
+                    </p>
+
+                    <pre>Zaszyfrowano: Itcbi
+Klucz: 8</pre>
+
+
+                    <h3>Odszyfrowywanie</h3>
+
+                    <p>
+                        Wybierz opcję <code>2</code>.
+                        Następnie podaj zaszyfrowany tekst oraz klucz.
+                    </p>
+
+                    <pre>Wpisz zaszyfrowany tekst: Itcbi
+Podaj klucz: 8
+
+Odszyfrowano: Aluta</pre>
+
+                </div>
+
+            </div>
+
+
+            <!-- ALGORYTM -->
+
+            <div class="box" id="algorithm">
+
+                <h2>5. Algorytm szyfru Cezara</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Program wykorzystuje szyfr Cezara.
+                        Jest to jeden z klasycznych algorytmów
+                        szyfrowania podstawieniowego.
+                    </p>
+
+                    <p>
+                        Każda litera zostaje przesunięta w alfabecie
+                        o określoną liczbę pozycji.
+                    </p>
+
+                    <p>Przykład dla klucza <strong>3</strong>:</p>
+
+                    <pre>A → D
+B → E
+C → F
+D → G
+E → H</pre>
+
+                    <p>
+                        W programie zastosowano działanie modulo 26:
+                    </p>
+
+                    <pre>E(x) = (x + k) mod 26</pre>
+
+                    <p>
+                        Odszyfrowywanie wykorzystuje odwrotne przesunięcie:
+                    </p>
+
+                    <pre>D(x) = (x - k) mod 26</pre>
+
+                    <p>
+                        Gdzie:
+                    </p>
+
+                    <ul>
+                        <li><code>x</code> — pozycja litery</li>
+                        <li><code>k</code> — klucz</li>
+                        <li><code>26</code> — liczba liter alfabetu</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- KOD -->
+
+            <div class="box" id="code">
+
+                <h2>6. Kod programu</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Główna funkcja szyfrująca wygląda następująco:
+                    </p>
+
+                    <pre>def szyfruj(tekst, klucz):
+    return ''.join(
+        chr((ord(c) - 65 + klucz) % 26 + 65)
+        if c.isupper()
+        else chr((ord(c) - 97 + klucz) % 26 + 97)
+        if c.islower()
+        else c
+        for c in tekst
+    )</pre>
+
+                    <p>
+                        Funkcja wykorzystuje:
+                    </p>
+
+                    <ul>
+                        <li><code>ord()</code> — zamienia znak na liczbę</li>
+                        <li><code>chr()</code> — zamienia liczbę na znak</li>
+                        <li><code>isupper()</code> — sprawdza wielką literę</li>
+                        <li><code>islower()</code> — sprawdza małą literę</li>
+                        <li><code>join()</code> — łączy znaki w tekst</li>
+                        <li><code>% 26</code> — zapewnia zawijanie alfabetu</li>
+                    </ul>
+
+
+                    <h3>Odszyfrowywanie</h3>
+
+                    <p>
+                        Funkcja odszyfrowująca wykorzystuje funkcję
+                        szyfrującą z ujemnym kluczem:
+                    </p>
+
+                    <pre>def odszyfruj(tekst, klucz):
+    return szyfruj(tekst, -klucz)</pre>
+
+                    <div class="success">
+                        Dzięki temu nie trzeba pisać drugi raz
+                        całego algorytmu szyfrowania.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- JĘZYKI -->
+
+            <div class="box" id="language">
+
+                <h2>7. Obsługa języków</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Program obsługuje obecnie dwa języki:
+                    </p>
+
+                    <ul>
+                        <li>🇵🇱 Polski</li>
+                        <li>🇬🇧 English</li>
+                    </ul>
+
+                    <p>
+                        Teksty interfejsu są przechowywane w słowniku:
+                    </p>
+
+                    <pre>teksty = {
+    "pl": {
+        "encrypt": "Szyfruj",
+        "decrypt": "Odszyfruj",
+        "exit": "Wyjdź"
+    },
+
+    "en": {
+        "encrypt": "Encrypt",
+        "decrypt": "Decrypt",
+        "exit": "Exit"
+    }
+}</pre>
+
+                    <p>
+                        Dzięki temu logika programu pozostaje taka sama,
+                        niezależnie od wybranego języka.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- KLUCZ -->
+
+            <div class="box" id="key">
+
+                <h2>8. Klucz szyfrowania</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Podczas szyfrowania program losuje klucz
+                        z zakresu od <code>1</code> do <code>25</code>.
+                    </p>
+
+                    <pre>klucz = random.randint(1, 25)</pre>
+
+                    <p>
+                        Klucz jest wyświetlany użytkownikowi razem
+                        z zaszyfrowanym tekstem.
+                    </p>
+
+                    <div class="warning">
+
+                        <strong>Ważne:</strong>
+
+                        Klucz jest potrzebny do odszyfrowania wiadomości.
+                        Jeśli użytkownik go zgubi, program nie będzie
+                        wiedział, jakie przesunięcie zastosować.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BEZPIECZEŃSTWO -->
+
+            <div class="box" id="security">
+
+                <h2>9. Bezpieczeństwo</h2>
+
+                <div class="box-content">
+
+                    <div class="warning">
+
+                        <strong>UWAGA:</strong>
+
+                        UGAEGQfb.py nie jest obecnie bezpiecznym
+                        narzędziem kryptograficznym.
+
+                    </div>
+
+                    <p>
+                        Szyfr Cezara posiada tylko 25 możliwych kluczy.
+                        Oznacza to, że osoba atakująca może bardzo łatwo
+                        sprawdzić wszystkie możliwe przesunięcia.
+                    </p>
+
+                    <p>
+                        Dlatego obecna wersja projektu jest przeznaczona
+                        wyłącznie do nauki i eksperymentowania.
+                    </p>
+
+                    <p>
+                        Nie należy używać jej do zabezpieczania:
+                    </p>
+
+                    <ul>
+                        <li>haseł</li>
+                        <li>danych osobowych</li>
+                        <li>kluczy API</li>
+                        <li>poufnych wiadomości</li>
+                        <li>ważnych plików</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXE -->
+
+            <div class="box" id="exe">
+
+                <h2>10. Budowanie pliku EXE</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Program można spakować do pliku wykonywalnego
+                        dla systemu Windows za pomocą PyInstaller.
+                    </p>
+
+                    <p>Instalacja:</p>
+
+                    <pre>pip install pyinstaller</pre>
+
+                    <p>Budowanie:</p>
+
+                    <pre>py -m PyInstaller --onefile UGAEGQfb.py</pre>
+
+                    <p>
+                        Gotowy plik znajdzie się w katalogu:
+                    </p>
+
+                    <pre>dist/UGAEGQfb.exe</pre>
+
+                    <div class="info">
+
+                        Program korzysta z terminala poprzez
+                        <code>input()</code> i <code>print()</code>,
+                        dlatego nie należy używać
+                        <code>--noconsole</code>.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STRUKTURA -->
+
+            <div class="box" id="structure">
+
+                <h2>11. Struktura projektu</h2>
+
+                <div class="box-content">
+
+                    <pre>UGAEGQfb.py/
+│
+├── UGAEGQfb.py
+├── UGAEGQfb.exe
+├── README.md
+├── LICENSE
+│
+└── documentation/
+    │
+    ├── pl/
+    │   ├── index.html
+    │   └── documentation.html
+    │
+    └── en/
+        ├── index.html
+        └── documentation.html</pre>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROADMAP -->
+
+            <div class="box" id="roadmap">
+
+                <h2>12. Plan rozwoju</h2>
+
+                <div class="box-content">
+
+                    <p>
+                        Możliwe przyszłe funkcje projektu:
+                    </p>
+
+                    <ul>
+                        <li>lepsza walidacja danych wejściowych</li>
+                        <li>obsługa błędnych kluczy</li>
+                        <li>zapisywanie konfiguracji lokalnie</li>
+                        <li>eksperymenty z szyfrem Vigenère'a</li>
+                        <li>lepsze zarządzanie kluczami</li>
+                        <li>obsługa plików</li>
+                        <li>bezpieczniejsze generowanie losowych danych</li>
+                        <li>poznanie współczesnej kryptografii</li>
+                        <li>eksperymenty z AES-GCM</li>
+                        <li>eksperymenty z ChaCha20-Poly1305</li>
+                    </ul>
+
+                    <p>
+                        Projekt będzie rozwijany stopniowo wraz z nauką
+                        kolejnych elementów Pythona i kryptografii.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <footer>
+        UGAEGQfb.py &copy; 2026 — Polska dokumentacja
+    </footer>
+
+</div>
+
+</body>
+</html>
