@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techkarol.github.io/UGAEGQfb.py/sitemap.xml
